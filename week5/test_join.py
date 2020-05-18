@@ -16,6 +16,7 @@ class TestJoin:
         method_here = 'join' in globals()
         assert method_here, 'חסרה המתודה join'
         assert join([1, 2], [8], [9, 5, 6], sep='@') == [1, 2, '@', 8, '@', 9, 5, 6]
+        assert join([1, 2], [8], [9, 5, 6], sep='*~*') == [1, 2, '*~*', 8, '*~*', 9, 5, 6]
         assert join([1, 2], [8], [9, 5, 6]) == [1, 2, '-', 8, '-', 9, 5, 6]
         assert join([1]) == [1]
 
